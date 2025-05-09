@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    width: 300px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+
+#search-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-btn:hover {
+    background-color: #2980b9;
+}
+
+.file-upload {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.file-upload.highlight {
+    background-color: #d6eaf8;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.file-upload label {
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.file-upload input[type="file"] {
+    margin-right: 15px;
+}
+
+.file-hint {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.guide-link {
+    margin-left: 15px;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.guide-link:hover {
+    text-decoration: underline;
+}
+
+.category {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.category-header {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.category-header i {
+    margin-right: 10px;
+}
+
+.category-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.bookmark-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    color: #333;
+}
+
+.bookmark-item:hover {
+    background-color: #f1f1f1;
+}
+
+.bookmark-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.bookmark-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .search-box {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    #search-input {
+        width: 100%;
+    }
+    
+    .file-upload {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .file-upload label, .file-upload input[type="file"] {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    .category-content {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .category-content {
+        grid-template-columns: 1fr 1fr;
+    }
+} 
